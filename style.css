@@ -88,4 +88,6 @@
             width: 95%;
           }
         } 
-        
+        .row{
+          color: blue;
+        }
