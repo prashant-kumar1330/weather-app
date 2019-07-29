@@ -1,3 +1,4 @@
+const userInterface= new UI();
 const weather = new openweather();
 window.onload=function(){
    
@@ -8,7 +9,7 @@ window.onload=function(){
         const cityName = event.target.value;
         //search for the weather
         weather.search(cityName).then(data=>{
-            console.log(data.wind.speed);
+            
         // temprature conversion
         const degC= data.main.temp-273.15;
         const degCr=Math.floor(degC);
@@ -55,7 +56,7 @@ window.onload=function(){
             
         }
         windSpeed= data.wind.speed+' m/s'
-  console.log(windSpeed);
+
 
   result={
       condition: data.weather[0].main,
@@ -64,10 +65,11 @@ window.onload=function(){
       degFr: Math.floor(degFr),
       city: data.name,
       wind_direction: wind_direction,
-      windSpeed: data.wind.speed,
+      windSpeed: windSpeed,
       
 //delhi
   }
+   userInterface.insert(result);
 
         })  
     })
