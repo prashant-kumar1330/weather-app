@@ -1,5 +1,5 @@
 class openweather{
-
+//hahahahhahahahahhahahahahahahahahhaha
 constructor(){
     this.api='8bf8cf609cba55933164bbea08f37bf5';
 }
